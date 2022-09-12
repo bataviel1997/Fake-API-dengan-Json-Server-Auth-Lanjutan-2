@@ -1,0 +1,60 @@
+{
+  "siswa": [
+    {
+      "id": 1,
+      "nama_lengkap": "elbatavi",
+      "usia": 33,
+      "alamat": "Bekasi",
+      "nama_wali": "ageng"
+    },
+    {
+      "nama_lengkap": "Consequat Non ipsum",
+      "usia": "56",
+      "alamat": "Molestiae magna inve",
+      "wali_murid": "Facere dolor at temp",
+      "id": 2
+    },
+    {
+      "nama_lengkap": "Consequat Non ipsum",
+      "usia": "56",
+      "alamat": "Molestiae magna inve",
+      "wali_murid": "Facere dolor at temp",
+      "id": 3
+    },
+    {
+      "nama_lengkap": "Consequat Non ipsum",
+      "usia": "56",
+      "alamat": "Molestiae magna inve",
+      "wali_murid": "Facere dolor at temp",
+      "id": 4
+    },
+    {
+      "nama_lengkap": "Dolore mollitia aute",
+      "usia": "40",
+      "alamat": "Voluptas ad dolorem ",
+      "wali_murid": "Recusandae Distinct",
+      "id": 5
+    },
+    {
+      "nama_lengkap": "Dolore mollitia aute",
+      "usia": "40",
+      "alamat": "Voluptas ad dolorem ",
+      "wali_murid": "Recusandae Distinct",
+      "id": 6
+    },
+    {
+      "nama_lengkap": "Dolore mollitia aute",
+      "usia": "40",
+      "alamat": "Voluptas ad dolorem ",
+      "wali_murid": "Recusandae Distinct",
+      "id": 7
+    },
+    {
+      "nama_lengkap": "Dicta iusto enim et ",
+      "usia": "49",
+      "alamat": "Labore mollitia veli",
+      "wali_murid": "Doloremque minim ius",
+      "id": 8
+    }
+  ]
+}
