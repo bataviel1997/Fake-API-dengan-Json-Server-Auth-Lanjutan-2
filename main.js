@@ -3,7 +3,7 @@ import './style.css'
 import Data_siswa from './src/pages/Datasiswa';
 
 const app = document.getElementById('app');
-const page = document.location.pathname
+const page = document.location.pathname;
 // konidisi
 switch(page) {
   case '/' : 
@@ -18,5 +18,4 @@ switch(page) {
   app.innerHTML = `
   <h1>error</h1>
   ` 
-
 }

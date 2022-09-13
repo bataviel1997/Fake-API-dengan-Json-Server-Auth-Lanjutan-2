@@ -55,6 +55,20 @@
       "alamat": "Labore mollitia veli",
       "wali_murid": "Doloremque minim ius",
       "id": 8
+    },
+    {
+      "nama_lengkap": "Lorem occaecat magni",
+      "usia": "1",
+      "alamat": "Placeat ut consequa",
+      "wali_murid": "Laudantium qui est",
+      "id": 9
+    },
+    {
+      "nama_lengkap": "Lorem occaecat magni",
+      "usia": "1",
+      "alamat": "Placeat ut consequa",
+      "wali_murid": "Laudantium qui est",
+      "id": 10
     }
   ]
 }
