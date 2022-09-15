@@ -2,8 +2,7 @@ import axios from 'axios';
 const app = document.getElementById('app');
 // handle deleted
 window.handle_delete = (id) => {
-  axios
-    .delete('https://vitejs-vite-ooczrz--3000.local.webcontainer.io/siswa' + id)
+  axios.delete('https://vitejs-vite-ooczrz--3000.local.webcontainer.io/siswa'+id)
     .then((res) => {
       if (res.status == 200) {
         alert('Delete Data');
