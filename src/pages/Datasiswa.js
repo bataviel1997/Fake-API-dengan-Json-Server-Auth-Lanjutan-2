@@ -1,33 +1,52 @@
-import axios from "axios"
-//  1 function tidak auto run
-async function get_data_sisiwa(){
-// 2 menangkap data
-  let all_component = []
-  let get_data = await axios.get('https://vitejs-vite-jl3fpt--3000.local.webcontainer.io/siswa')
-  // 3 mendapatkan dan memecah objek data
-  let store_component =  await get_data.data.forEach((e)=>{
-      all_component.push(`
-        <div class="card">
-          <p>${e.nama_lengkap}</p> 
-          <p>${e.usia}</p> 
-        </div>
-      `)
-  })
-    return all_component;
+import axios from 'axios';
+const app = document.getElementById('app');
+// handle deleted
+window.handle_delete = (id) => {
+  axios
+    .delete('https://vitejs-vite-ooczrz--3000.local.webcontainer.io/siswa' + id)
+    .then((res) => {
+      if (res.status == 200) {
+        alert('Delete Data');
+        window.location.reload();
+      }
+    });
+};
 
-}
+// handle edit
 
-export default function Data_siswa(){
-  return `
-    <div>
-      <h1> Daftar Siswa Jvalley </h1>
+window.handle_edit = (data) => {
+  app.innerHTML += `
+      <div class='modal'>
+        <form>
+          <div>
+            <label for='nama_lengkap'>nama lengkap</label>
+            <input type='text' value='${data.nama_lengkap}' id='nama_lengkap' />
+          </div>
 
-      <div id=="card_container">
-      ${get_data_sisiwa().then(com =>{
-        return com.join('')
-      })}
+          <div>
+            <label for='usia'>usia</label>
+            <input type='text' value='${data.usia}' id='usia' />
+          </div>
+        </form>
+      </div>`;
+};
+
+export default function Data_siswa() {
+  axios
+    .get('https://vitejs-vite-ooczrz--3000.local.webcontainer.io/siswa')
+    .then((res) => {
+      app.innerHTML += `<h1>Data Siswa</h1>`;
+      res.data.map((e) => {
+        app.innerHTML += `
+      <div class= "card">
+      <h3> ${e.nama_lengkap}</h3>
+      <p>usia : ${e.usia}</p>
+      <button onclick="handle_delete(${e.id})">Delete</button>
+      <button onclick="handle_edit(${JSON.stringify(e)})">Update</button>
+
       </div>
-
-    </div>  
-  `
+      `;
+      });
+      app.innerHTML += `<a href="/">Kembali</a>`;
+    });
 }
